@@ -92,7 +92,7 @@ class _ScreenLoginState extends State<ScreenLoginStatefulWidget> {
           // FORGOT LABEL
           TextButton(
             onPressed: (){} ,
-            child: const Text('Si olvidaste tu contraseña ponte en contacto con un administrador')
+            child: const Text('¿Olvidaste tu PIN?')
           ),
         ],),),      
     );

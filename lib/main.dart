@@ -3,6 +3,8 @@ import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
+final version = '0.7.0';
+
 void main() {
   debugPrint('main()');
   runApp(const MyApp());
@@ -40,6 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final screenHeigth = MediaQuery.of(context).size.height;
     
     debugPrint('Screensize = $screenWidth x $screenHeigth');
+
+    // Leer versión actual de la aplicación
+
+    // verificar descarga
     return Container(
       width: screenWidth * 1.0,
       height: screenHeigth * 1.0,
@@ -48,24 +54,31 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
+          // Desarrollado por emplea
           Container(
             width: screenWidth * .498,
             height: screenWidth * .197,
             color: Colors.transparent,
             child: Image.asset('assets/logodev.png'), // Size 498 x 197
           ),
+
+          // LOGO Animado
           Container(
-            width: screenWidth * 1.0,
-            height: screenWidth * 1.0,
+            width: screenHeigth * .5,
+            height: screenHeigth * .5,
             color: Colors.transparent,
             child: const RiveAnimation.asset('assets/logo.riv'),
           ),
+          
+          // Bienvenido
           Container(
             width: screenWidth * 1.0,
-            height: screenHeigth * .1,
+            height: screenHeigth * .05,
             color: Colors.transparent,
             child: const Text('Bienvenido,', style: TextStyle(decoration: TextDecoration.none, color: Colors.deepPurple, fontSize: 24, fontFamily: "Roboto"), textAlign: TextAlign.center,),
           ),
+
+          // Botones
           Container(
             width: screenWidth * 1.0,
             height: screenHeigth * .1,
@@ -79,11 +92,25 @@ class _MyHomePageState extends State<MyHomePage> {
               ]),
           ),
 
+          // Disclaimer
           Container(
             width: screenWidth * 1.0,
             height: screenHeigth * .1,
             color: Colors.transparent,
-            child: const Center(child: Text('Al ingresar aceptas nuestras Condiciones de uso y Politica de privacidad,', style: TextStyle(decoration: TextDecoration.none, color: Colors.grey, fontSize: 10, fontFamily: "Roboto"), textAlign: TextAlign.center,)),
+            child: const Center(
+              child: Text(
+                'Al ingresar aceptas nuestras Condiciones de uso y Politica de privacidad,',
+                style: TextStyle(decoration: TextDecoration.none, color: Colors.deepPurple, fontSize: 10, fontFamily: "Roboto"), textAlign: TextAlign.center,)),
+          ),
+
+          // Version
+          Container(
+            width: screenWidth * 1.0,
+            height: screenHeigth * .05,
+            color: Colors.transparent,
+            child: Text(
+              'empleApp v$version',
+              style: TextStyle(decoration: TextDecoration.none, color: Colors.grey, fontSize: 10, fontFamily: "Roboto"), textAlign: TextAlign.center,),
           ),
         ],
       ),
