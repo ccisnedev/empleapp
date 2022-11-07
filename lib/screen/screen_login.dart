@@ -1,9 +1,8 @@
-import 'package:empleapp/main.dart';
 import 'package:empleapp/screen/screen_user.dart';
 import 'package:flutter/material.dart';
 
 class ScreenLogin extends StatelessWidget {
-const ScreenLogin({ Key? key}) : super(key: key);
+  const ScreenLogin({ Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
@@ -82,7 +81,7 @@ class _ScreenLoginState extends State<ScreenLoginStatefulWidget> {
           // ################################
           // LOGIN BUTTON
           ElevatedButton(
-            onPressed: (){},
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenUser())),
             child: SizedBox(
               width: MediaQuery.of(context).size.width * .2,
               child: const Text('Insgresar', textAlign: TextAlign.center, style: TextStyle(fontSize: 10),)
@@ -92,7 +91,7 @@ class _ScreenLoginState extends State<ScreenLoginStatefulWidget> {
           // ################################
           // FORGOT LABEL
           TextButton(
-            onPressed: (){},
+            onPressed: (){} ,
             child: const Text('Si olvidaste tu contraseña ponte en contacto con un administrador')
           ),
         ],),),      

@@ -1,14 +1,26 @@
-import 'screen_login.dart';
+import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 
-class ScreenUser extends StatefulWidget {
-  const ScreenUser({ Key? key }) : super(key: key);
+class ScreenUser extends StatelessWidget {
+const ScreenUser({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(title: const Text('empleapp'),),
+      body: const ScreenUserStatefulWidget(),
+    );
+  }
+}
+
+class ScreenUserStatefulWidget extends StatefulWidget {
+  const ScreenUserStatefulWidget({ Key? key }) : super(key: key);
 
   @override
   _ScreenUserState createState() => _ScreenUserState();
 }
 
-class _ScreenUserState extends State<ScreenUser> {
+class _ScreenUserState extends State<ScreenUserStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,3 +28,4 @@ class _ScreenUserState extends State<ScreenUser> {
     );
   }
 }
+
