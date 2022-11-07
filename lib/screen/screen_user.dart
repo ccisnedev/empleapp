@@ -1,4 +1,3 @@
-import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 
 class ScreenUser extends StatelessWidget {

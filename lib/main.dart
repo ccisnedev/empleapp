@@ -3,7 +3,7 @@ import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-final version = '0.7.0';
+String version = '0.7.0';
 
 void main() {
   debugPrint('main()');
