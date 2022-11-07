@@ -1,4 +1,4 @@
-import 'package:empleapp/screen/screen_client.dart';
+// import 'package:empleapp/screen/screen_client.dart';
 import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
@@ -73,9 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                OutlinedButton(onPressed: onPressedClient, child: SizedBox(width: screenWidth * .2, child: const Text('Cliente      ', textAlign: TextAlign.center, style: TextStyle(fontSize: 10),))),
-                OutlinedButton(onPressed: onPressedWorker, child: SizedBox(width: screenWidth * .2, child: const Text('Trabajador   ', textAlign: TextAlign.center, style: TextStyle(fontSize: 10)))),
-                OutlinedButton(onPressed: onPressedAdmin, child: SizedBox(width: screenWidth * .2, child: const Text('Administrador', textAlign: TextAlign.center, style: TextStyle(fontSize: 10)))),
+                ElevatedButton(onPressed: onPressedClient, child: SizedBox(width: screenWidth * .2, child: const Text('Cliente      ', textAlign: TextAlign.center, style: TextStyle(fontSize: 10)))),
+                ElevatedButton(onPressed: onPressedWorker, child: SizedBox(width: screenWidth * .2, child: const Text('Trabajador   ', textAlign: TextAlign.center, style: TextStyle(fontSize: 10)))),
+                ElevatedButton(onPressed: onPressedAdmin, child: SizedBox(width: screenWidth * .2, child: const Text('Administrador', textAlign: TextAlign.center, style: TextStyle(fontSize: 10)))),
               ]),
           ),
 
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void onPressedClient() {
     debugPrint('Boton presionado: onPressedClient');
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const ScreenClient()));
+    // Navigator.push(context, MaterialPageRoute(builder: (context) => const ScreenClient()));
   }
 
   void onPressedWorker() {
