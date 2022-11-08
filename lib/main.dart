@@ -1,4 +1,3 @@
-// import 'package:empleapp/screen/screen_client.dart';
 import 'package:empleapp/screen/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
